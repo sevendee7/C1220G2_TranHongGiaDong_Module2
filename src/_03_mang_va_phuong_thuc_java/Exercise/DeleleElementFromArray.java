@@ -29,9 +29,12 @@ public class DeleleElementFromArray {
                 System.out.print(mang[i] + "   ");
             }
             System.out.println();
-            int temp = mang[index];
-            mang[index] = mang[mang.length - 1];
-            mang[mang.length - 1] = 0;
+            for (byte i = index; i < mang.length-1; i++) {
+                int temp = mang[i];
+                mang[i] = mang[i+1];
+                mang[i+1] = temp;
+            }
+            mang[mang.length-1] = 0;
             System.out.println("Mảng sau khi xóa !");
             for (byte i = 0; i < n; i++) {
                 System.out.print(mang[i] + "   ");
