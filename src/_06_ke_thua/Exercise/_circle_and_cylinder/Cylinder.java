@@ -1,7 +1,6 @@
 package _06_ke_thua.Exercise._circle_and_cylinder;
 
 public class Cylinder extends Circle {
-    private static final double PI = 3.14;
     private double height = 2.0;
 
     public Cylinder() {}

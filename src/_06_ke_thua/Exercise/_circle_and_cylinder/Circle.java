@@ -1,7 +1,6 @@
 package _06_ke_thua.Exercise._circle_and_cylinder;
 
 public class Circle {
-    private static final double PI = 3.14;
     private double radius = 1.0;
     private String color = "blue";
 
@@ -29,11 +28,11 @@ public class Circle {
     }
 
     public double getArea() {
-        return radius * radius * PI;
+        return radius * radius * Math.PI;
     }
 
     public double getPerimeter() {
-        return 2 * radius * PI;
+        return 2 * radius * Math.PI;
     }
 
     @Override
