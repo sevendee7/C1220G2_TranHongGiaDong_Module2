@@ -1,4 +1,4 @@
-package _07_abstract_class_interface.Practices.fruit;
+package _07_abstract_class_interface.Practices._fruit;
 
 public class Orange extends Fruit {
     @Override

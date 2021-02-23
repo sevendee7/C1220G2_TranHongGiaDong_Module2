@@ -1,6 +1,6 @@
-package _07_abstract_class_interface.Practices.animal;
+package _07_abstract_class_interface.Practices._animal;
 
-import _07_abstract_class_interface.Practices.edible.Edible;
+import _07_abstract_class_interface.Practices._edible.Edible;
 
 public class Chicken extends Animal implements Edible {
     @Override

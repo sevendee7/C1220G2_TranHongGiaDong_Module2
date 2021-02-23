@@ -1,12 +1,12 @@
 package _07_abstract_class_interface.Practices;
 
-import _07_abstract_class_interface.Practices.animal.Animal;
-import _07_abstract_class_interface.Practices.animal.Tiger;
-import _07_abstract_class_interface.Practices.animal.Chicken;
-import _07_abstract_class_interface.Practices.edible.Edible;
-import _07_abstract_class_interface.Practices.fruit.Apple;
-import _07_abstract_class_interface.Practices.fruit.Fruit;
-import _07_abstract_class_interface.Practices.fruit.Orange;
+import _07_abstract_class_interface.Practices._animal.Animal;
+import _07_abstract_class_interface.Practices._animal.Tiger;
+import _07_abstract_class_interface.Practices._animal.Chicken;
+import _07_abstract_class_interface.Practices._edible.Edible;
+import _07_abstract_class_interface.Practices._fruit.Apple;
+import _07_abstract_class_interface.Practices._fruit.Fruit;
+import _07_abstract_class_interface.Practices._fruit.Orange;
 
 
 public class AbstractAndInterfaceTests {
