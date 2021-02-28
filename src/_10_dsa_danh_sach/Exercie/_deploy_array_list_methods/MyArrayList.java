@@ -53,7 +53,7 @@ public class MyArrayList<E> {
 
     public boolean contains(E o) {
         for (int i = 0; i < size; i++) {
-            if (elements[i] == o) {
+            if (elements[i].equals(o)) {
                 return true;
             }
         }
@@ -61,11 +61,9 @@ public class MyArrayList<E> {
     }
 
     public int indexOf(E o) {
-        if (contains(o)) {
-            for (int i = 0; i < size; i++) {
-                if (elements[i] == o) {
-                    return i;
-                }
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
+                return i;
             }
         }
         return -1;
@@ -87,6 +85,7 @@ public class MyArrayList<E> {
         for (int i = 0; i < size; i++) {
             elements[i] = null;
         }
+        size = 0;
     }
 
     @Override

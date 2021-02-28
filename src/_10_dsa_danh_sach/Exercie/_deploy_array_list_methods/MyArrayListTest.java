@@ -9,8 +9,8 @@ public class MyArrayListTest {
         listInterger.add(3, 1);
         listInterger.add(4, 0);
 
-        System.out.println(listInterger.contains(7));
-        System.out.println(listInterger.indexOf(7));
+        System.out.println(listInterger.contains(4));
+        System.out.println(listInterger.indexOf(4));
         System.out.println(listInterger.get(3));
         System.out.println(listInterger.size());
         System.out.println(listInterger.add(5));
@@ -22,6 +22,8 @@ public class MyArrayListTest {
         MyArrayList<Integer> listClone = new MyArrayList<Integer>();
         listClone = listInterger.clone();
         System.out.println("List after clone: ");
+        System.out.println(listClone);
+        listClone.clear();
         System.out.println(listClone);
     }
 }

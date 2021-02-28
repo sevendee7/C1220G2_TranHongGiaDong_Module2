@@ -20,7 +20,10 @@ public class MyLinkedList<E> {
         }
     }
 
-    public MyLinkedList() {
+    public MyLinkedList() {}
+
+    public MyLinkedList(Object data) {
+        head = new Node(data);
     }
 
     public void add(int index, E element) {
