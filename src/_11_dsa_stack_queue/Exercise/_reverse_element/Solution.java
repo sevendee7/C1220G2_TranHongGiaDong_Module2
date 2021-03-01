@@ -1,4 +1,4 @@
-package _11_dsa_stack_queue.Practice._deploy_queue_by_array_list;
+package _11_dsa_stack_queue.Exercise._reverse_element;
 
 public class Solution {
     private static class Node {
@@ -59,6 +59,5 @@ public class Solution {
         System.out.println("------");
         deQueue(queue);
         displayQueue(queue);
-
     }
 }
