@@ -23,6 +23,7 @@ public class Palindrome {
                 break;
             }
         }
+        
         if (isPalindrome) {
             System.out.println('"' + string + "\" is palindrome");
         } else {

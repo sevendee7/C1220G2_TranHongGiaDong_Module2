@@ -2,7 +2,7 @@ package _11_dsa_stack_queue.Exercise._reverse_element;
 
 import java.util.Stack;
 
-public class ReverseStack<N> {
+public class ReverseStack {
     public static void main(String[] args) {
         Stack<Number> stack = new Stack<Number>();
         int[] numberList = {1,2,3};
