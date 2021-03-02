@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class TestTreeMap {
     public static void main(String[] args) {
         Map<String, Integer> treeMap = new TreeMap<>();
-        String string = "abc def ghi abc xzc def ty abc";
+        String string = "abc def ghi abc xzc def ty abc ty";
         String[] array = string.split(" ");
         for (int i = 0; i < array.length; i++) {
             treeMap.putIfAbsent(array[i], 0);
