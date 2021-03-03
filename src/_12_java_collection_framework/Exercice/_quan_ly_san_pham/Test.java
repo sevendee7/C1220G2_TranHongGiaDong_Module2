@@ -18,7 +18,8 @@ public class Test {
                 "\n3. Delete product by id number" +
                 "\n4. Display product list" +
                 "\n5. Search product by name" +
-                "\n6. Sort product by ascending/decreasing by product's price");
+                "\n6. Sort product by ascending/decreasing by product's price" +
+                "\nEnter your choice:");
         Scanner scan = new Scanner(System.in);
         int choose = scan.nextInt();
         switch (choose) {
@@ -82,7 +83,8 @@ public class Test {
             case 6:
                 System.out.println("Choose:" +
                         "\n1. Price Ascending" +
-                        "\n2. Price Decresing");
+                        "\n2. Price Decresing" +
+                        "\n3. Enter your choice:");
                 int chooseSort = scan.nextInt();
                 switch (chooseSort) {
                     case 1:
