@@ -7,7 +7,7 @@ public class Test {
         ProductManager item1 = new ProductManager("Iphone7", "002", 399.99);
         ProductManager item2 = new ProductManager("Iphone8", "001", 599.99);
         ProductManager item3 = new ProductManager("IphoneX", "004", 799.99);
-        List<ProductManager> productList = new ArrayList<ProductManager>();
+        List<ProductManager> productList = new ArrayList<>();
         productList.add(item1);
         productList.add(item2);
         productList.add(item3);
@@ -43,15 +43,15 @@ public class Test {
             case 3:
                 System.out.println("Enter id number of product you want to delete: ");
                 String idNumberDelete = scan.next();
-                boolean check = false;
+                boolean isDeletable = false;
                 for (int i = 0; i < productList.size(); i++) {
                     if (productList.get(i).getProductId().equals(idNumberDelete)) {
                         productList.get(i).deleteProductById(idNumberDelete, productList);
-                        check = true;
+                        isDeletable = true;
                         break;
                     }
                 }
-                if (!check) {
+                if (!isDeletable) {
                     System.out.println("Product not found ! ");
                 }
                 break;
