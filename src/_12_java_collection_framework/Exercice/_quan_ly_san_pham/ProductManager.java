@@ -3,14 +3,10 @@ package _12_java_collection_framework.Exercice._quan_ly_san_pham;
 import java.util.List;
 import java.util.Scanner;
 
-public class ProductManager extends Product {
+public class ProductManager {
     Scanner scan = new Scanner(System.in);
 
-    public ProductManager(String name, String id, Double price) {
-        super(name, id, price);
-    }
-
-    public boolean searchProductById(String idNumber, List<ProductManager> productList) {
+    public boolean searchProductById(String idNumber, List<Product> productList) {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getProductId().equals(idNumber)) {
                 return true;
@@ -19,7 +15,7 @@ public class ProductManager extends Product {
         return false;
     }
 
-    public void addProduct(List<ProductManager> productList) {
+    public void addProduct(List<Product> productList) {
         System.out.println("Enter product's id number: ");
         String newIdNumber = scan.next();
         String newName = "";
@@ -37,7 +33,7 @@ public class ProductManager extends Product {
             System.out.println("Enter product's price: ");
             newPrice = scan.nextDouble();
         }
-        ProductManager newProduct = new ProductManager(newName, newIdNumber, newPrice);
+        Product newProduct = new Product(newName, newIdNumber, newPrice);
         productList.add(newProduct);
         System.out.println("Add successful !");
         for (Product product : productList) {
@@ -45,7 +41,7 @@ public class ProductManager extends Product {
         }
     }
 
-    public void editInformationById(int index, List<ProductManager> productList) {
+    public void editInformationById(int index, List<Product> productList) {
         System.out.println("Choose what you want to edit:" +
                 "\n1. Product's name." +
                 "\n2. Product's id number." +
@@ -73,7 +69,7 @@ public class ProductManager extends Product {
         }
     }
 
-    public void deleteProductById(String idNumber, List<ProductManager> productList) {
+    public void deleteProductById(String idNumber, List<Product> productList) {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getProductId().equals(idNumber)) {
                 productList.remove(i);

@@ -1,6 +1,6 @@
 package _12_java_collection_framework.Exercice._quan_ly_san_pham;
 
-public class Product implements Comparable {
+public class Product extends ProductManager implements Comparable {
     private String productName;
     private String productId;
     private Double productPrice;

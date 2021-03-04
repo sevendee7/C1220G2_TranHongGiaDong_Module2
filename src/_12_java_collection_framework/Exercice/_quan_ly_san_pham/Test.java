@@ -4,13 +4,15 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        ProductManager item1 = new ProductManager("Iphone7", "002", 399.99);
-        ProductManager item2 = new ProductManager("Iphone8", "001", 599.99);
-        ProductManager item3 = new ProductManager("IphoneX", "004", 799.99);
-        List<ProductManager> productList = new ArrayList<>();
+        Product item1 = new Product("Iphone7", "002", 399.99);
+        Product item2 = new Product("Iphone8", "001", 599.99);
+        Product item3 = new Product("IphoneX", "004", 799.99);
+        Product item4 = new Product("Iphone7", "005", 799.99);
+        List<Product> productList = new ArrayList<>();
         productList.add(item1);
         productList.add(item2);
         productList.add(item3);
+        productList.add(item4);
 
         System.out.println("Choose function:" +
                 "\n1. Add new product" +
@@ -58,7 +60,7 @@ public class Test {
                 break;
             case 4:
                 System.out.println("Product list:");
-                for (ProductManager product : productList) {
+                for (Product product : productList) {
                     System.out.println(product.toString());
                 }
                 break;
@@ -68,12 +70,9 @@ public class Test {
                 boolean productIsFound = false;
                 for (int i = 0; i < productList.size(); i++) {
                     if (productList.get(i).getProductName().equals(searchByName)) {
-                        System.out.println(searchByName + " is found at " + (i + 1) + " in the list.");
-                        for (ProductManager product : productList) {
-                            System.out.println(product.toString());
-                        }
+                        System.out.println(searchByName + " is found !");
+                        System.out.println(productList.get(i));
                         productIsFound = true;
-                        break;
                     }
                 }
                 if (!productIsFound) {
@@ -84,20 +83,20 @@ public class Test {
                 System.out.println("Choose:" +
                         "\n1. Price Ascending" +
                         "\n2. Price Decresing" +
-                        "\n3. Enter your choice:");
+                        "\nEnter your choice:");
                 int chooseSort = scan.nextInt();
                 switch (chooseSort) {
                     case 1:
                         Collections.sort(productList);
                         System.out.println("Product list after sort:");
-                        for (ProductManager product : productList) {
+                        for (Product product : productList) {
                             System.out.println(product.toString());
                         }
                         break;
                     case 2:
                         Collections.reverse(productList);
                         System.out.println("Product list after sort:");
-                        for (ProductManager product : productList) {
+                        for (Product product : productList) {
                             System.out.println(product.toString());
                         }
                         break;
