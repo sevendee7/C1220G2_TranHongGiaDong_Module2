@@ -2,7 +2,6 @@ package _06_ke_thua.Practice;
 
 public class Circle extends Shape {
     private double radius = 1.0;
-    private static final double PI = 3.14;
 
     public Circle(){
     }
@@ -25,11 +24,11 @@ public class Circle extends Shape {
     }
 
     public double getArea() {
-        return radius * radius * PI;
+        return radius * radius * Math.PI;
     }
 
     public double getPerimeter() {
-        return 2 * radius * PI;
+        return 2 * radius * Math.PI;
     }
 
     @Override

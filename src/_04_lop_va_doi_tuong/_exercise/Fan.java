@@ -4,16 +4,20 @@ public class Fan {
     static final int SLOW = 1;
     static final int MEDIUM = 2;
     static final int FAST = 3;
-    private int speed = SLOW;
-    private boolean on = false;
-    private double radius = 5;
-    private String color = "Blue";
+    static final boolean STATUS = true;
+    static final double RADIUSDEFAULT = 10;
+    static final String COLORDEFAULT = "Blue";
+    private int speed;
+    private boolean on;
+    private double radius;
+    private String color;
 
-    public Fan(int speed, boolean on, double radius, String color) {
-        this.speed = speed;
-        this.on = on;
-        this.radius = radius;
-        this.color = color;
+
+    public Fan() {
+        this.speed = SLOW;
+        this.on = STATUS;
+        this.radius = RADIUSDEFAULT;
+        this.color = COLORDEFAULT;
     }
 
     public int getSpeed() {
@@ -55,8 +59,14 @@ public class Fan {
     }
 
     public static void main(String[] args) {
-        Fan fan1 = new Fan(FAST, true, 10, "Yellow");
-        Fan fan2 = new Fan(MEDIUM, false, 5, "Blue");
+        Fan fan1 = new Fan();
+        fan1.setOn(true);
+        fan1.setColor("Yellow");
+        fan1.setSpeed(FAST);
+        fan1.setRadius(7.7);
+        Fan fan2 = new Fan();
+        fan2.setSpeed(MEDIUM);
+        fan2.setColor("Purple");
         System.out.println(fan1.toResult() + "\n" + fan2.toResult());
     }
 }

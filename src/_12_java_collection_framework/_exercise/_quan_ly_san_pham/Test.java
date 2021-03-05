@@ -21,6 +21,7 @@ public class Test {
                 "\n4. Display product list" +
                 "\n5. Search product by name" +
                 "\n6. Sort product by ascending/decreasing by product's price" +
+                "\n7. Exit" +
                 "\nEnter your choice:");
         Scanner scan = new Scanner(System.in);
         int choose = scan.nextInt();
@@ -82,7 +83,7 @@ public class Test {
             case 6:
                 System.out.println("Choose:" +
                         "\n1. Price Ascending" +
-                        "\n2. Price Decresing" +
+                        "\n2. Price Descending" +
                         "\nEnter your choice:");
                 int chooseSort = scan.nextInt();
                 switch (chooseSort) {

@@ -1,5 +1,6 @@
 package Exercises;
 
+import Exercises._colorable.Colorable;
 import Exercises._resizeable.Resizeable;
 
 public class Shape implements Resizeable {
