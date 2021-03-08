@@ -20,7 +20,7 @@ public class VehicleManager {
     }
 
     public List<Vehicle> addNewVehicle() {
-        System.out.println("Enter registration number: ");
+        System.out.println("Enter registration number:  ");
         String registrationNumber = scanner.next();
         System.out.println("Enter cylinder capacity of vehicle: ");
         int cylinderCapacity = scanner.nextInt();

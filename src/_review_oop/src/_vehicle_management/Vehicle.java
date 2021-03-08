@@ -36,9 +36,9 @@ public class Vehicle {
     }
 
     public String toString() {
-        return "Vehicle{registrationNumber= " + this.registrationNumber +
-                ", cylinderCapacity= " + this.cylinderCapacity +
-                ", price= " + this.price +
-                ", tax= " + this.taxDeclaration + "}";
+        return "Vehicle{registrationNumber = " + this.registrationNumber +
+                ", cylinderCapacity = " + this.cylinderCapacity +
+                ", price = " + this.price +
+                ", tax = " + this.taxDeclaration + "}";
     }
 }

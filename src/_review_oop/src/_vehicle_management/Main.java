@@ -16,7 +16,7 @@ public class Main {
                     "\n 1. Add new vehicle" +
                     "\n 2. Show tax declaration of vehicle" +
                     "\n 3. Exit" +
-                    "\nEnter your choice: ");
+                    "\nEnter your choice:  ");
             choose = scanner.nextByte();
             String quit;
             switch (choose) {
