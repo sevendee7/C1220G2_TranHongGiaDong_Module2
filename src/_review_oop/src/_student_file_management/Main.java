@@ -31,8 +31,14 @@ public class Main {
                     ,studentHomeTown,studentClass,studentCourse,studentSemester));
         }
 
-        for (Person person : personManager.getPersonList()) {
-            System.out.println(person);
+        int count = 0;
+        for (Person person : personManager.personList) {
+            if (!person.toString().equals("not 1985"))
+                System.out.println(person);
+            if (person.getHomeTown().equals("Thái Nguyên")) {
+                count++;
+            }
         }
+        System.out.println("Có " + count + " học sinh có năm sinh 1985, quê ở Thái Nguyên");
     }
 }

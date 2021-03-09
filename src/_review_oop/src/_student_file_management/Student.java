@@ -39,27 +39,31 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "studentName='" + super.getName() + '\'' +
-                ", studentAge=" + super.getAge() +
-                ", studentYearOfBirth=" + super.getYearOfBirth() +
-                ", studentHomeTown='" + super.getHomeTown() + '\'' +
-                ", studentClass='" + studentClass + '\'' +
-                ", studentCourse='" + studentCourse + '\'' +
-                ", studentSemester='" + studentSemester + '\'' +
-                '}';
+        boolean check = false;
+        if (super.getYearOfBirth() == 1985) {
+            check = true;
+            return  "Student{" +
+                    "studentName='" + super.getName() + '\'' +
+                    ", studentAge=" + super.getAge() +
+                    ", studentYearOfBirth=" + super.getYearOfBirth() +
+                    ", studentHomeTown='" + super.getHomeTown() + '\'' +
+                    ", studentClass='" + studentClass + '\'' +
+                    ", studentCourse='" + studentCourse + '\'' +
+                    ", studentSemester='" + studentSemester + '\'' +
+                    '}';
+        }   return "not 1985";
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if(obj == null || !(obj instanceof Student)){
-            return false;
-        }
-
-        Student otherStudent = (Student) obj;
-        if(this.getYearOfBirth() == 1985){
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if(obj == null || !(obj instanceof Student)){
+//            return false;
+//        }
+//
+//        Student otherStudent = (Student) obj;
+//        if(this.getYearOfBirth() == 1985){
+//            return true;
+//        }
+//        return false;
+//    }
 }
