@@ -39,9 +39,6 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        boolean check = false;
-        if (super.getYearOfBirth() == 1985) {
-            check = true;
             return  "Student{" +
                     "studentName='" + super.getName() + '\'' +
                     ", studentAge=" + super.getAge() +
@@ -51,7 +48,6 @@ public class Student extends Person{
                     ", studentCourse='" + studentCourse + '\'' +
                     ", studentSemester='" + studentSemester + '\'' +
                     '}';
-        }   return "not 1985";
     }
 
 //    @Override

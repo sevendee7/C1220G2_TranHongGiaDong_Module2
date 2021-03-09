@@ -1,6 +1,7 @@
 package _review_oop.src._student_file_management;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -31,13 +32,18 @@ public class Main {
                     ,studentHomeTown,studentClass,studentCourse,studentSemester));
         }
 
+        List<Person> showStudentList = new ArrayList<>();
         int count = 0;
         for (Person person : personManager.personList) {
-            if (!person.toString().equals("not 1985"))
-                System.out.println(person);
+            if (person.getYearOfBirth() == 1985) {
+                showStudentList.add(person);
+            }
             if (person.getHomeTown().equals("Thái Nguyên")) {
                 count++;
             }
+        }
+        for (Person person : showStudentList) {
+            System.out.println(person);
         }
         System.out.println("Có " + count + " học sinh có năm sinh 1985, quê ở Thái Nguyên");
     }
