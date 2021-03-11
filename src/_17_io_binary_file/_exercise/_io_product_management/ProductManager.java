@@ -8,9 +8,8 @@ import java.util.Scanner;
 
 public class ProductManager {
     Scanner scanner = new Scanner(System.in);
-
-    public void ProductManager() {}
-
+    static final String FILE_PATH = "D:\\CodeGym\\C1220G2_TranHongGiaDong_Module2\\src\\_17_io_binary_file\\_exercise\\_io_product_management\\product_list.bin";
+    
     public Product addNewProduct() {
         System.out.println("Enter product's id number: ");
         String id = scanner.nextLine();
@@ -118,5 +117,20 @@ public class ProductManager {
                 }
                 break;
         }
+    }
+
+    public void saveFile(List<Product> list) {
+        try {
+            FileOutputStream fos = new FileOutputStream(FILE_PATH, true);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(list);
+            fos.close();
+            oos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Successful !");
     }
 }

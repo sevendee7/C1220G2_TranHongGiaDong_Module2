@@ -2,7 +2,8 @@ package _17_io_binary_file._exercise._io_product_management;
 
 import java.io.Serializable;
 
-public class Product implements Serializable,Comparable {
+public class Product implements Serializable, Comparable {
+
     private String id;
     private String name;
     private String brand;
